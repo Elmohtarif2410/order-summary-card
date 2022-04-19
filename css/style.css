@@ -1,0 +1,131 @@
+/* glopal rowls  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #382ae1;
+    --radius: 15px;
+    --black: #212b40;
+    --text-color: #9a9eb0;
+    --color-hover: #766cf1;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #e0e8ff;
+}
+
+/* special styles */
+
+h2, h3 {text-transform: capitalize}
+
+p {
+    line-height: 1.6;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none
+}
+
+/* style card */
+
+.summary-card {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.summary-card img {
+    max-width: 100%;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius)
+}
+
+.summary-card .container {
+    width: 345px;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+    body {background-image: url(../images/pattern-background-mobile.svg);}
+    .summary-card {width: 345px}
+    .summary-card .container {width: 280px}
+}
+
+.summary-card .container h2 {
+    color: var(--black);
+}
+
+.summary-card .container >  p {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.summary-card .container section  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fe;
+    padding:15px;
+    border-radius: var(--radius);
+}
+
+.summary-card .container section article {
+    display: flex;
+    align-items: center;
+}
+
+.summary-card .container section .text {margin-left: 15px}
+
+.summary-card .container section .text h3 {font-size: 16px}
+
+.summary-card .container section .text p {text-align: left}
+
+.summary-card .container section button {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.summary-card .container section button:hover {
+    text-decoration: none;
+    color: var(--color-hover)
+}
+
+.summary-card .container > button {text-transform: capitalize}
+
+.summary-card .container .main {
+    width: 100%;
+    background: var(--main-color);
+    color: #f4f6fc;
+    padding: 12px;
+    border-radius: var(--radius);
+    margin: 25px 0;
+    box-shadow: 0px 10px 20px #382ae15e
+}
+
+.summary-card .container .main:hover {background-color: var(--color-hover)}
+
+.summary-card .container .cancel {
+    color: #788097;
+    font-weight: bold;
+}
+
+.summary-card .container .cancel:hover {color: var(--black)}
